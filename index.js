@@ -6,7 +6,7 @@ const github = require('@actions/github');
 // Install OdinPlus Mod Uploader
 async function run(){
   try{
-    await exec('dotnet tool install -g Digitalroot.OdinPlusModUploader')
+    await exec('dotnet tool install -g Digitalroot.ModUploader')
     .catch((error) => core.setFailed(error));
 
 
