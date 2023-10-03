@@ -27,10 +27,10 @@ async function run(){
     const GITHUB_TOKEN = core.getInput('GITHUB_TOKEN');
 
     // Upload mod to NexusMods
-    await exec('opmu', ['nexusmods', 'check', `-k`, `${apiKey}`, `-cnxid`, `${cookieNexusId}`, `-csid`, `${cookieSidDevelop}`])
+    await exec('drmu', ['nexusmods', 'check', `-k`, `${apiKey}`, `-cnxid`, `${cookieNexusId}`, `-csid`, `${cookieSidDevelop}`])
           .catch((error) => core.setFailed(error));
 
-    await exec('opmu', ['nexusmods', 'upload', `${modId}`, `${archiveFile}`, 
+    await exec('drmu', ['nexusmods', 'upload', `${modId}`, `${archiveFile}`, 
                       `-f`, `${fileName}-${version}`,
                        `-v`, `${version}`,
                        `-g`, `${game}`,
