@@ -45,13 +45,13 @@ async function run(){
                         .catch((error) => core.setFailed(error));
 
     // Create a new comment on the commit with the upload result
-    const octokit = github.getOctokit(GITHUB_TOKEN);
-    const { owner, repo } = github.context.repo;
-    const { sha } = github.context.sha;
-    const comment = `Successfully uploaded mod to NexusMods: ${version}`;
+    // const octokit = github.getOctokit(GITHUB_TOKEN);
+    // const { owner, repo } = github.context.repo;
+    // const { sha } = github.context.sha;
+    // const comment = `Successfully uploaded mod to NexusMods: ${version}`;
 
-    await octokit.rest.repos.createCommitComment({ owner, repo, sha, body: comment })
-          .catch((error) => core.setFailed(error))
+    // await octokit.rest.repos.createCommitComment({ owner, repo, sha, body: comment })
+    //       .catch((error) => core.setFailed(error))
 
   } catch (error){
     core.setFailed(error);
